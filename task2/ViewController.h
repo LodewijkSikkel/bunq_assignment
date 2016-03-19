@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EmployeeDirectory.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSArray *array;
+}
 
+@property (nonatomic, readonly) UITableView *tableView;
+@property (nonatomic, readonly) EmployeeDirectory *directory;
 
 @end
 
